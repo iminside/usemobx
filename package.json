@@ -1,0 +1,49 @@
+{
+    "name": "usemobx",
+    "description": "mobx hooks for react",
+    "version": "0.1.0",
+    "author": "Denis Churbanov",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/iminside/usemobx.git"
+    },
+    "type": "module",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.esm.js",
+    "typings": "dist/index.d.ts",
+    "scripts": {
+        "start": "rollup -c -w",
+        "build": "rollup -c && tsc -p ./tsconfig.build.json",
+        "test": "jest",
+        "test:coverage": "jest --coverage",
+        "test:uncache": "jest --clearCache"
+    },
+    "files": [
+        "dist",
+        "src"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "dependencies": {
+        "mobx": "^6.12.3",
+        "react": "^18.2.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.24.1",
+        "@babel/core": "^7.24.4",
+        "@babel/preset-env": "^7.24.4",
+        "@babel/preset-typescript": "^7.24.1",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-commonjs": "^25.0.7",
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@types/react": "^18.2.75",
+        "core-js": "^3.36.1",
+        "prettier": "^3.2.5",
+        "rollup": "^4.14.1",
+        "rollup-plugin-auto-external": "^2.0.0",
+        "rollup-plugin-delete": "^2.0.0",
+        "typescript": "^5.4.4"
+    }
+}
